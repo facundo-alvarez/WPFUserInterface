@@ -1,0 +1,113 @@
+﻿<!-- <a href="https://www.flaticon.com/free-icons/game-center" title="game-center icons">Game-center icons created by Darius Dan - Flaticon</a> -->
+
+
+<Window x:Class="WPFUserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1024">
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="leftBar" Grid.RowSpan="2" Background="{StaticResource black}">
+            <StackPanel Style="{StaticResource leftBar}" >
+
+                <Image Source="Resources/Images/logo.png" Width="32" Margin="0 0 0 40"/>
+
+                <RadioButton IsChecked="True">
+                    <Image Source="Resources/Images/slack.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/shopping-bag.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/shopping-cart.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/tag.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/tool.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/truck.png" />
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Resources/Images/printer.png" />
+                </RadioButton>
+            </StackPanel>
+        </Grid>
+
+
+        <Grid Grid.Column="1" Background="{StaticResource gray}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <DockPanel VerticalAlignment="Center" Margin="10 0 0 0">
+                <Label Content="Search:"/>
+                <Button>
+                    <Image Source="Resources/Images/search.png" Width="16"/>
+                </Button>
+                <TextBox/>
+            </DockPanel>
+
+            <Grid Grid.Column="2" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Susane"/>
+                    <Border CornerRadius="50" Width="32" Height="32">
+                        <Border.Background>
+                            <ImageBrush ImageSource="Resources/Images/face.jpg"/>
+                        </Border.Background>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0 0 5 0" Style="{StaticResource topBar}">
+                    <Image Source="Resources/Images/bell.png"/>
+                    <Image Source="Resources/Images/settings.png"/>
+                    <Image Source="Resources/Images/help-circle.png"/>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="{StaticResource blue}">
+            <Grid Margin="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel>
+                    <Label Content="DASHBOARD" FontSize="30" Foreground="{StaticResource white}" FontFamily="Segoe UI Semibold"/>
+                    <TextBlock Padding="8 0" Text="Information and statistics about your sales" Foreground="{StaticResource white}" FontFamily="Segoe UI Light" TextDecorations="{x:Null}"/>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Window>
